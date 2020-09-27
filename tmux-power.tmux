@@ -135,11 +135,22 @@ tmux_set status-justify centre
 # Current window status
 tmux_set window-status-current-statys "fg=$TC,bg=$BG"
 
-# Pane border
-tmux_set pane-border-style "fg=$G07,bg=default"
 
+
+# Update by rodhash for my theming
+# Pane border
+# tmux_set pane-border-style "fg=$G07,bg=default"
+#
 # Active pane border
-tmux_set pane-active-border-style "fg=$TC,bg=$BG"
+# tmux_set pane-active-border-style "fg=$TC,bg=$BG"
+#
+#
+# Making lines transparent (black) on KDE Konsole
+set -g pane-border-style "fg=blue,bg=black"
+set -g pane-active-border-style "bg=black,fg=blue"
+
+
+
 
 # Pane number indicator
 tmux_set display-panes-colour "$G07"
