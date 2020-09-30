@@ -130,7 +130,8 @@ tmux_set window-status-current-format "#[fg=$BG,bg=$G06]#[fg=$TC,bold] #I:#W#
 tmux_set window-status-separator ""
 
 # Window status alignment
-tmux_set status-justify centre
+# tmux_set status-justify centre
+tmux_set status-justify left
 
 # Current window status
 tmux_set window-status-current-statys "fg=$TC,bg=$BG"
