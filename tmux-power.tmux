@@ -23,8 +23,10 @@ upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '')
 download_speed_icon=$(tmux_get '@tmux_power_download_speed_icon' '')
 session_icon="$(tmux_get '@tmux_power_session_icon' '')"
 user_icon="$(tmux_get '@tmux_power_user_icon' '')"
+# user_icon="$(tmux_get '@tmux_power_user_icon' '👥')"
 time_icon="$(tmux_get '@tmux_power_time_icon' '')"
 date_icon="$(tmux_get '@tmux_power_date_icon' '')"
+# date_icon="$(tmux_get '@tmux_power_date_icon' '亂')"
 show_upload_speed="$(tmux_get @tmux_power_show_upload_speed false)"
 show_download_speed="$(tmux_get @tmux_power_show_download_speed false)"
 prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
@@ -111,7 +113,8 @@ tmux_set status-left "$LS"
 tmux_set status-right-bg "$G04"
 tmux_set status-right-fg "G12"
 tmux_set status-right-length 150
-RS="#[fg=$TC,bg=$G06] $time_icon %T #[fg=$TC,bg=$G06]#[fg=$G04,bg=$TC] $date_icon %F "
+# RS="#[fg=$TC,bg=$G06] $time_icon %T #[fg=$TC,bg=$G06]#[fg=$G04,bg=$TC] $date_icon %F "
+RS="#[fg=$TC,bg=$G06] $time_icon %H:%M #[fg=$TC,bg=$G06]#[fg=$G04,bg=$TC] $date_icon %a %b%d"
 if "$show_download_speed"; then
     RS="#[fg=$G05,bg=$BG]#[fg=$TC,bg=$G05] $download_speed_icon#{download_speed} #[fg=$G06,bg=$G05]$RS"
 else
